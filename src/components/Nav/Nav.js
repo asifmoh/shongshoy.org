@@ -10,16 +10,14 @@ import { findMenuByLocation, MENU_LOCATION_NAVIGATION_DEFAULT } from 'lib/menus'
 import Section from 'components/Section';
 
 import styles from './Nav.module.scss';
-import NavListItem from 'components/NavListItem';
 
-import logo from '../assets/Shongshoy_Logo_animated.svg'
+import logo from '../assets/Shongshoy_Logo_animated.svg';
 import Image from 'next/image';
 
 import BootContainer from 'react-bootstrap/Container';
 import BootNav from 'react-bootstrap/Nav';
 import BootNavbar from 'react-bootstrap/Navbar';
 import BootNavDropdown from 'react-bootstrap/NavDropdown';
-
 
 const SEARCH_VISIBLE = 'visible';
 const SEARCH_HIDDEN = 'hidden';
@@ -188,85 +186,73 @@ const Nav = () => {
       <Section className={styles.navSection}>
         <p className={styles.navName}>
           <Link href="/">
-          <Image src={logo} alt={title} width={220} height={140}/>
+            <Image src={logo} alt={title} width={220} height={140} />
           </Link>
         </p>
 
-
-
         <BootNavbar bg="light" expand="lg">
-      <BootContainer fluid>
-                <BootNavbar.Toggle aria-controls="basic-navbar-nav" />
-        <BootNavbar.Collapse id="basic-navbar-nav">
-          <BootNav className="me-auto">
-            <BootNav.Link href="/">মূলপাতা</BootNav.Link>
-            <BootNav.Link href="/history/">ইতিহাস</BootNav.Link>
-            <BootNav.Link href="/library/">গ্রন্থাগার</BootNav.Link>
-            <BootNav.Link href="/faq/">উত্তরসমূহ</BootNav.Link>
-            <BootNav.Link href="/rules/">নীতিমালা</BootNav.Link>
-            <BootNavDropdown title="সংকলন" id="basic-nav-dropdown">
-              <BootNavDropdown.Item href="/references/archive/">প্রবন্ধ সংকলন</BootNavDropdown.Item>
-              <BootNavDropdown.Divider />
-              <BootNavDropdown.Item href="/references/islam/">
-              সংকলন – ইসলাম
-              </BootNavDropdown.Item>
-              <BootNavDropdown.Item href="/references/christianity/">সংকলন – খ্রিষ্টান</BootNavDropdown.Item>
-              
-              <BootNavDropdown.Item href="/references/hinduism/">
-              সংকলন – হিন্দু
-              </BootNavDropdown.Item>
-            </BootNavDropdown>
-          </BootNav>
-          <div className={styles.navSearch}>
-          {searchVisibility === SEARCH_HIDDEN && (
-            <button onClick={handleOnToggleSearch} disabled={!searchIsLoaded}>
-              <span className="sr-only">Toggle Search</span>
-              <FaSearch />
-            </button>
-          )}
-          {searchVisibility === SEARCH_VISIBLE && (
-            <form ref={formRef} action="/search" data-search-is-active={!!query}>
-              <input
-                type="search"
-                name="q"
-                value={query || ''}
-                onChange={handleOnSearch}
-                autoComplete="off"
-                placeholder="Search..."
-                required
-              />
-              <div className={styles.navSearchResults}>
-                {results.length > 0 && (
-                  <ul>
-                    {results.map(({ slug, title }, index) => {
-                      return (
-                        <li key={slug}>
-                          <Link tabIndex={index} href={postPathBySlug(slug)}>
-                            <a>{title}</a>
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
+          <BootContainer fluid>
+            <BootNavbar.Toggle aria-controls="basic-navbar-nav" />
+            <BootNavbar.Collapse id="basic-navbar-nav">
+              <BootNav className="me-auto">
+                <BootNav.Link href="/">মূলপাতা</BootNav.Link>
+                <BootNav.Link href="/history/">ইতিহাস</BootNav.Link>
+                <BootNav.Link href="/library/">গ্রন্থাগার</BootNav.Link>
+                <BootNav.Link href="/faq/">উত্তরসমূহ</BootNav.Link>
+                <BootNav.Link href="/rules/">নীতিমালা</BootNav.Link>
+                <BootNavDropdown title="সংকলন" id="basic-nav-dropdown">
+                  <BootNavDropdown.Item href="/references/archive/">প্রবন্ধ সংকলন</BootNavDropdown.Item>
+                  <BootNavDropdown.Divider />
+                  <BootNavDropdown.Item href="/references/islam/">সংকলন – ইসলাম</BootNavDropdown.Item>
+                  <BootNavDropdown.Item href="/references/christianity/">সংকলন – খ্রিষ্টান</BootNavDropdown.Item>
+
+                  <BootNavDropdown.Item href="/references/hinduism/">সংকলন – হিন্দু</BootNavDropdown.Item>
+                </BootNavDropdown>
+              </BootNav>
+              <div className={styles.navSearch}>
+                {searchVisibility === SEARCH_HIDDEN && (
+                  <button onClick={handleOnToggleSearch} disabled={!searchIsLoaded}>
+                    <span className="sr-only">Toggle Search</span>
+                    <FaSearch />
+                  </button>
                 )}
-                {results.length === 0 && (
-                  <p>
-                    Sorry, not finding anything for <strong>{query}</strong>
-                  </p>
+                {searchVisibility === SEARCH_VISIBLE && (
+                  <form ref={formRef} action="/search" data-search-is-active={!!query}>
+                    <input
+                      type="search"
+                      name="q"
+                      value={query || ''}
+                      onChange={handleOnSearch}
+                      autoComplete="off"
+                      placeholder="Search..."
+                      required
+                    />
+                    <div className={styles.navSearchResults}>
+                      {results.length > 0 && (
+                        <ul>
+                          {results.map(({ slug, title }, index) => {
+                            return (
+                              <li key={slug}>
+                                <Link tabIndex={index} href={postPathBySlug(slug)}>
+                                  <a>{title}</a>
+                                </Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      )}
+                      {results.length === 0 && (
+                        <p>
+                          Sorry, not finding anything for <strong>{query}</strong>
+                        </p>
+                      )}
+                    </div>
+                  </form>
                 )}
               </div>
-            </form>
-          )}
-        </div>
-        </BootNavbar.Collapse>
-        
-      </BootContainer>
-
-      
-    </BootNavbar>
-
-        
-       
+            </BootNavbar.Collapse>
+          </BootContainer>
+        </BootNavbar>
       </Section>
     </nav>
   );

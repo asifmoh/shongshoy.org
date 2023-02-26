@@ -32,8 +32,9 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html {...this.helmetHtmlAttrComponents}>
-        <Head>{this.helmetHeadComponents}<meta name="robots" content="noindex, nofollow" />
-        
+        <Head>
+          {this.helmetHeadComponents}
+          <meta name="robots" content="noindex, nofollow" />
         </Head>
         <body {...this.helmetBodyAttrComponents}>
           <Main />

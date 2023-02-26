@@ -13,7 +13,7 @@ import styles from 'styles/pages/Home.module.scss';
 
 export default function Home({ posts, pagination }) {
   const { metadata = {} } = useSite();
-  const { title, description } = metadata;
+  const { title } = metadata;
 
   return (
     <Layout>
@@ -24,8 +24,22 @@ export default function Home({ posts, pagination }) {
             __html: title,
           }}
         />
-  <h2 style={{fontFamily: 'Shobuj Nolua', fontSize: '2.5em', color: '#108080', textAlign: 'center', textShadow: '4px 4px 4px #aaa'}}>“জ্ঞান যেখানে সীমাবদ্ধ,<br />যুক্তি যেখানে আড়ষ্ট,<br />মুক্তি সেখানে অসম্ভব” </h2>
-   </Header>
+        <h2
+          style={{
+            fontFamily: 'Shobuj Nolua',
+            fontSize: '2.5em',
+            color: '#108080',
+            textAlign: 'center',
+            textShadow: '4px 4px 4px #aaa',
+          }}
+        >
+          “জ্ঞান যেখানে সীমাবদ্ধ,
+          <br />
+          যুক্তি যেখানে আড়ষ্ট,
+          <br />
+          মুক্তি সেখানে অসম্ভব”{' '}
+        </h2>
+      </Header>
 
       <Section>
         <Container>
