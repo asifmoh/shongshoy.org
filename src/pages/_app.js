@@ -11,7 +11,9 @@ import { getAllMenus } from 'lib/menus';
 
 import 'styles/globals.scss';
 import 'styles/wordpress.scss';
+import 'styles/local.scss';
 import variables from 'styles/_variables.module.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App({ Component, pageProps = {}, metadata, recentPosts, categories, menus }) {
   const site = useSiteContext({

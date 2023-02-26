@@ -12,6 +12,15 @@ import Section from 'components/Section';
 import styles from './Nav.module.scss';
 import NavListItem from 'components/NavListItem';
 
+import logo from '../assets/Shongshoy_Logo_animated.svg'
+import Image from 'next/image';
+
+import BootContainer from 'react-bootstrap/Container';
+import BootNav from 'react-bootstrap/Nav';
+import BootNavbar from 'react-bootstrap/Navbar';
+import BootNavDropdown from 'react-bootstrap/NavDropdown';
+
+
 const SEARCH_VISIBLE = 'visible';
 const SEARCH_HIDDEN = 'hidden';
 
@@ -179,15 +188,36 @@ const Nav = () => {
       <Section className={styles.navSection}>
         <p className={styles.navName}>
           <Link href="/">
-            <a>{title}</a>
+          <Image src={logo} alt={title} width={220} height={140}/>
           </Link>
         </p>
-        <ul className={styles.navMenu}>
-          {navigation?.map((listItem) => {
-            return <NavListItem key={listItem.id} className={styles.navSubMenu} item={listItem} />;
-          })}
-        </ul>
-        <div className={styles.navSearch}>
+
+
+
+        <BootNavbar bg="light" expand="lg">
+      <BootContainer fluid>
+                <BootNavbar.Toggle aria-controls="basic-navbar-nav" />
+        <BootNavbar.Collapse id="basic-navbar-nav">
+          <BootNav className="me-auto">
+            <BootNav.Link href="/">মূলপাতা</BootNav.Link>
+            <BootNav.Link href="/history/">ইতিহাস</BootNav.Link>
+            <BootNav.Link href="/library/">গ্রন্থাগার</BootNav.Link>
+            <BootNav.Link href="/faq/">উত্তরসমূহ</BootNav.Link>
+            <BootNav.Link href="/rules/">নীতিমালা</BootNav.Link>
+            <BootNavDropdown title="সংকলন" id="basic-nav-dropdown">
+              <BootNavDropdown.Item href="/references/archive/">প্রবন্ধ সংকলন</BootNavDropdown.Item>
+              <BootNavDropdown.Divider />
+              <BootNavDropdown.Item href="/references/islam/">
+              সংকলন – ইসলাম
+              </BootNavDropdown.Item>
+              <BootNavDropdown.Item href="/references/christianity/">সংকলন – খ্রিষ্টান</BootNavDropdown.Item>
+              
+              <BootNavDropdown.Item href="/references/hinduism/">
+              সংকলন – হিন্দু
+              </BootNavDropdown.Item>
+            </BootNavDropdown>
+          </BootNav>
+          <div className={styles.navSearch}>
           {searchVisibility === SEARCH_HIDDEN && (
             <button onClick={handleOnToggleSearch} disabled={!searchIsLoaded}>
               <span className="sr-only">Toggle Search</span>
@@ -228,6 +258,15 @@ const Nav = () => {
             </form>
           )}
         </div>
+        </BootNavbar.Collapse>
+        
+      </BootContainer>
+
+      
+    </BootNavbar>
+
+        
+       
       </Section>
     </nav>
   );

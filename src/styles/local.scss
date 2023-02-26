@@ -1,0 +1,486 @@
+@font-face {
+	font-family: Shobuj Nolua;
+	src: url(../components/assets/fonts/Shobuj.woff2);
+	font-weight: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: Kalpurush;
+	src: url(../components/assets/fonts/kalpurush.woff2);
+	font-weight: 700;
+	font-style: normal;
+	font-display: fallback;
+}
+body {
+	font-size: 20px;
+	font-family: Kalpurush, Arial, sans-serif, -apple-system, BlinkMacSystemFont !important;
+}
+h1 {
+	font-family: Kalpurush, Arial, sans-serif;
+	font-size: 2.2em;
+}
+h2 {
+	font-family: Kalpurush, Arial, sans-serif;
+	font-size: 2.0em;
+}
+h3 {
+	font-family: Kalpurush, Arial, sans-serif;
+	font-size: 1.8em;
+}
+h4 {
+	font-family: Kalpurush, Arial, sans-serif;
+	font-size: 1.6em;
+}
+h5 {
+	font-family: Kalpurush, Arial, sans-serif;
+	font-size: 1.4em;
+}
+h6 {
+	font-family: Kalpurush, Arial, sans-serif;
+	font-size: 1.2em;
+}
+p {
+	font-family: Kalpurush, Arial, sans-serif;
+	font-size: 18px;
+}
+pre {
+	font-family: Kalpurush, Arial, sans-serif;
+	font-size: 18px;
+}
+span {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+sup {
+	font-family: Kalpurush, Arial, sans-serif;
+	font-size: 18px;
+}
+ol.footnotes {
+	li {
+		font-family: Kalpurush, Arial, sans-serif;
+		font-size: 18px;
+		font-size: 18px;
+	}
+}
+.h1 {
+	site-title {
+		font-family: Kalpurush, Arial, sans-serif;
+	}
+}
+.main-navigation {
+	a {
+		font-family: Kalpurush, Arial, sans-serif;
+	}
+	ul {
+		li {
+			a {
+				font-size: 20px;
+				font-size: 18px;
+			}
+			.sub-arrow {
+				font-size: 24px;
+			}
+		}
+	}
+}
+div {
+	font-family: Kalpurush, Arial, sans-serif;
+	font-size: 18px;
+}
+li {
+	font-family: Kalpurush, Arial, sans-serif;
+	font-size: 18px;
+	a {
+		font-size: 18px;
+	}
+}
+blockquote {
+	p {
+		font-family: Kalpurush, Arial, sans-serif;
+		font-size: 18px;
+		font-size: 20px;
+		&:before {
+			color: #222;
+			font-size: 22px;
+		}
+	}
+	border-radius: 8px;
+	border-left: 1px solid #428bca;
+	color: #0e0f0e;
+	background: #ccc;
+	box-shadow: 5px 5px lightsteelblue;
+	a {
+		&:link {
+			color: green;
+		}
+		&:hover {
+			color: red;
+		}
+	}
+}
+abbr {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+acronym {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+address {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+big {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+cite {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+code {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+del {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+dfn {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+em {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+font {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+ins {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+kbd {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+q {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+s {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+samp {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+small {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+strike {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+sub {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+tt {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+var {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+dl {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+dt {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+dd {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+ol {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+ul {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+fieldset {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+form {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+label {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+legend {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+table {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+caption {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+tbody {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+thead {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+tr {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+th {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+td {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+.wp-block-quote {
+	p {
+		font-family: Kalpurush, Arial, sans-serif;
+		font-size: 20px;
+	}
+	border-radius: 8px;
+	border-left: 1px solid #428bca;
+	color: #0e0f0e;
+	background: #ccc;
+	box-shadow: 5px 5px lightsteelblue;
+}
+.wp-block-quote.is-style-large {
+	p {
+		font-family: Kalpurush, Arial, sans-serif;
+	}
+	border-radius: 8px;
+	border-left: 1px solid #428bca;
+	color: #0e0f0e;
+	background: #ccc;
+	box-shadow: 5px 5px lightsteelblue;
+}
+.wp-block-quote.has-text-align-right {
+	p {
+		font-family: Kalpurush, Arial, sans-serif;
+	}
+	border-radius: 8px;
+	border-left: 1px solid #428bca;
+	color: #0e0f0e;
+	background: #ccc;
+	box-shadow: 5px 5px lightsteelblue;
+}
+h1.entry-title {
+	font-family: Kalpurush, Arial, sans-serif;
+}
+h2.entry-title {
+	font-family: Kalpurush, Arial, sans-serif;
+	a {
+		&:hover {
+			font-family: Kalpurush, Arial, sans-serif;
+		}
+		&:active {
+			font-family: Kalpurush, Arial, sans-serif;
+		}
+	}
+}
+.footer-column-three {
+	h3 {
+		font-family: Kalpurush, Arial, sans-serif;
+	}
+}
+article {
+	h1 {
+		font-family: Kalpurush, Arial, sans-serif;
+	}
+	h2 {
+		font-family: Kalpurush, Arial, sans-serif;
+	}
+	h3 {
+		font-family: Kalpurush, Arial, sans-serif;
+	}
+	h4 {
+		font-family: Kalpurush, Arial, sans-serif;
+	}
+	h5 {
+		font-family: Kalpurush, Arial, sans-serif;
+	}
+	h6 {
+		font-family: Kalpurush, Arial, sans-serif;
+	}
+}
+.login {
+	label {
+		font-family: Kalpurush, Arial, sans-serif;
+	}
+	#backtoblog {
+		a {
+			font-family: Kalpurush, Arial, sans-serif;
+		}
+	}
+	#nav {
+		a {
+			font-family: Kalpurush, Arial, sans-serif;
+		}
+	}
+}
+#header-logo-image {
+	margin-left: auto;
+	margin-right: auto;
+}
+.entry-content {
+	li {
+		font-size: 18px;
+	}
+}
+#site-navigation {
+	background-color: #3B0404;
+}
+.super-menu {
+	.toggle-mobile-menu {
+		font-size: 24px;
+	}
+}
+.toggle-mobile-menu {
+	&:before {
+		font-size: 24px;
+	}
+}
+.mobile-menu-active {
+	.smenu-hide {
+		font-size: 24px;
+	}
+}
+a {
+	&:link {
+		color: #108080;
+	}
+	&:visited {
+		color: #4285F4;
+	}
+	&:hover {
+		color: #B60C0C;
+	}
+}
+.slider-featured-image {
+	a {
+		img {
+			border-radius: 10px;
+			width: 725px;
+			height: 350px;
+		}
+	}
+}
+.widget_highlighted_posts {
+	img {
+		border-radius: 10px;
+	}
+}
+.widget_featured_posts {
+	img {
+		border-radius: 10px;
+	}
+	padding: 12px;
+	border-radius: 5px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+	-moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+	box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+}
+.single-related-posts {
+	img {
+		border-radius: 10px;
+	}
+}
+.comment-content {
+	border-radius: 10px;
+}
+.author-box {
+	border-radius: 10px;
+}
+#toc_container {
+	background-color: #f9f9f9;
+	border-radius: 10px;
+	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+.quotes_box_and_tips {
+	&:before {
+		border-radius: 10px;
+	}
+	padding-right: 8px;
+	padding-left: 8px;
+}
+.toc_title {
+	padding: 10px 0 0 20px;
+}
+#content {
+	.post {
+		img {
+			border-radius: 10px;
+		}
+		.article-content {
+			.below-entry-meta {
+				.posted-on {
+					a {
+						font-size: 18px;
+					}
+				}
+				.byline {
+					a {
+						font-size: 18px;
+					}
+				}
+				.comments {
+					a {
+						font-size: 18px;
+					}
+				}
+				.tag-links {
+					a {
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+}
+.footnotes {
+	font-style: italic;
+}
+.wp-block-button__link {
+	background-color: #cc3d64;
+}
+.footer-socket-wrapper {
+	.copyright {
+		color: #cc3d64;
+		a {
+			color: #64c1ff;
+		}
+	}
+}
+#secondary {
+	.widget {
+		padding: 12px;
+		border-radius: 5px;
+		-webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+		-moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+		box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+	}
+}
+.tg-footer-main-widget {
+	padding: 12px;
+	border-radius: 5px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+	-moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+	box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+}
+.tg-footer-other-widgets {
+	padding: 12px;
+	border-radius: 5px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+	-moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+	box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+}
+.footer-socket-left-section {
+	padding: 12px;
+	border-radius: 5px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+	-moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+	box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+	float: left;
+}
+.footer-socket-right-section {
+	padding: 12px;
+	border-radius: 5px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+	-moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+	box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+}

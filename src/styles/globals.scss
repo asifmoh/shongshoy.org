@@ -1,6 +1,7 @@
 @import "styles/settings/__settings";
 @import "style.css";
 
+
 * {
   box-sizing: border-box;
 }
@@ -9,7 +10,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, sans-serif;
+  font-family: -apple-system, Kalpurush, BlinkMacSystemFont, Segoe UI, Helvetica Neue, sans-serif;
 }
 
 p {
@@ -18,7 +19,7 @@ p {
 }
 
 ul {
-  padding-left: 1.2em;
+  padding-left: 2.2em;
 }
 
 a {
@@ -55,4 +56,63 @@ figcaption {
   left: -9999px;
   width: 0;
   height: 0;
+}
+
+
+/*--------Block-quote extra ----*/
+
+
+blockquote {
+  margin: 0 0 1rem;
+  padding: 0 1rem;
+  color: #7d7d7d;
+  border-left: 4px solid #d6d6d6;
+}
+
+blockquote > :first-child {
+  margin-top: 0;
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.wp-block-quote {
+  border-radius: 8px;
+  border-left: 1px solid #428bca;
+  color: #0e0f0e;
+  background: #ccc;
+  box-shadow: 5px 5px #b0c4de;
+  padding: 1.5em 1.75em;
+  margin-bottom: 2rem
+}
+
+.wp-block-quote p,blockquote p {
+  background: #ccc;
+  color: #000
+}
+
+.wp-block-quote p:before,blockquote p:before {
+  color: #222
+}
+
+.wp-block-quote a:link,blockquote a:link {
+  color: green
+}
+
+.wp-block-quote a:hover,blockquote a:hover {
+  color: red
+}
+
+
+.wp-block-button__link {
+  background-color: #cc3d64
+}
+.wp-block-pullquote {
+  font-size: 1.5em;
+  line-height: 1.6
+}
+
+.footnotes {
+  font-style: italic
 }
