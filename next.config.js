@@ -29,7 +29,7 @@ const nextConfig = {
     // the rest will be rendered on-demand
     POSTS_PRERENDER_COUNT: 5,
 
-    WORDPRESS_GRAPHQL_ENDPOINT: process.env.WORDPRESS_GRAPHQL_ENDPOINT,
+    WORDPRESS_GRAPHQL_ENDPOINT: 'https://www.shongshoy.com/graphql',
     WORDPRESS_MENU_LOCATION_NAVIGATION: process.env.WORDPRESS_MENU_LOCATION_NAVIGATION || 'PRIMARY',
     WORDPRESS_PLUGIN_SEO: parseEnvValue(process.env.WORDPRESS_PLUGIN_SEO, false),
   },
