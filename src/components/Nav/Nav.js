@@ -5,7 +5,6 @@ import { FaSearch } from 'react-icons/fa';
 import useSite from 'hooks/use-site';
 import useSearch, { SEARCH_STATE_LOADED } from 'hooks/use-search';
 import { postPathBySlug } from 'lib/posts';
-import { findMenuByLocation, MENU_LOCATION_NAVIGATION_DEFAULT } from 'lib/menus';
 
 import Section from 'components/Section';
 
@@ -27,11 +26,8 @@ const Nav = () => {
 
   const [searchVisibility, setSearchVisibility] = useState(SEARCH_HIDDEN);
 
-  const { metadata = {}, menus } = useSite();
+  const { metadata = {} } = useSite();
   const { title } = metadata;
-
-  const navigationLocation = process.env.WORDPRESS_MENU_LOCATION_NAVIGATION || MENU_LOCATION_NAVIGATION_DEFAULT;
-  const navigation = findMenuByLocation(menus, navigationLocation);
 
   const { query, results, search, clearSearch, state } = useSearch({
     maxResults: 5,
