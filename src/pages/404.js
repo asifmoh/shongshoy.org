@@ -20,7 +20,7 @@ export default function Custom404() {
           <p className={styles.errorCode}>404</p>
           <p className={styles.errorMessage}>The page you were looking for could not be found.</p>
           <p>
-            <Link href="/">
+            <Link legacyBehavior href="/">
               <a>Go back home</a>
             </Link>
           </p>

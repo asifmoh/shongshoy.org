@@ -33,7 +33,7 @@ const Metadata = ({ className, author, date, categories, options = DEFAULT_METAD
               />
             )}
             By{' '}
-            <Link href={authorPathByName(author.name)}>
+            <Link legacyBehavior href={authorPathByName(author.name)}>
               <a rel="author">{author.name}</a>
             </Link>
           </address>
@@ -50,7 +50,7 @@ const Metadata = ({ className, author, date, categories, options = DEFAULT_METAD
         <li className={styles.metadataCategories}>
           {compactCategories && (
             <p title={categories.map(({ name }) => name).join(', ')}>
-              <Link href={categoryPathBySlug(categories[0].slug)}>
+              <Link legacyBehavior href={categoryPathBySlug(categories[0].slug)}>
                 <a>{categories[0].name}</a>
               </Link>
               {categories.length > 1 && ' and more'}
@@ -61,7 +61,7 @@ const Metadata = ({ className, author, date, categories, options = DEFAULT_METAD
               {categories.map((category) => {
                 return (
                   <li key={category.slug}>
-                    <Link href={categoryPathBySlug(category.slug)}>
+                    <Link legacyBehavior href={categoryPathBySlug(category.slug)}>
                       <a>{category.name}</a>
                     </Link>
                   </li>

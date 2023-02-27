@@ -23,7 +23,7 @@ export default function Custom500() {
             reach out to let us know!
           </p>
           <p>
-            <Link href="/">
+            <Link legacyBehavior href="/">
               <a>Go back home</a>
             </Link>
           </p>
