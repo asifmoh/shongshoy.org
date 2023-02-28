@@ -7,7 +7,11 @@ const sitemap = require('./plugins/sitemap');
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-
+  experimental: {
+    images: {
+      unoptimized: true,
+    },
+  },
   // By default, Next.js removes the trailing slash. One reason this would be good
   // to include is by default, the `path` property of the router for the homepage
   // is `/` and by using that, would instantly create a redirect
@@ -24,7 +28,7 @@ const nextConfig = {
     // and available at /images/og. If changing, make sure to update the .gitignore
 
     OG_IMAGE_DIRECTORY: '/images/og',
-
+   
     // By default, only render this number of post pages ahead of time, otherwise
     // the rest will be rendered on-demand
     POSTS_PRERENDER_COUNT: 5,
@@ -39,6 +43,7 @@ module.exports = () => {
   const plugins = [indexSearch, feed, sitemap];
   return plugins.reduce((acc, plugin) => plugin(acc), nextConfig);
 };
+
 
 /**
  * parseEnv
