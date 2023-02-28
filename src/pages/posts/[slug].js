@@ -41,8 +41,8 @@ export default function Post({ post, socialImage, related }) {
 
   post.og.imageUrl = `${homepage}${socialImage}`;
   post.og.imageSecureUrl = post.og.imageUrl;
-  post.og.imageWidth = 2000;
-  post.og.imageHeight = 1000;
+  // post.og.imageWidth = 2000;
+  // post.og.imageHeight = 1000;
 
   const { metadata } = usePageMetadata({
     metadata: {
@@ -80,25 +80,25 @@ export default function Post({ post, socialImage, related }) {
             dangerouslySetInnerHTML={featuredImage.caption}
           />
         )}
-        <h1
-          className={styles.title}
-          dangerouslySetInnerHTML={{
-            __html: title,
-          }}
-        />
-        <Metadata
-          className={styles.postMetadata}
-          date={date}
-          author={author}
-          categories={categories}
-          options={metadataOptions}
-          isSticky={isSticky}
-        />
       </Header>
 
       <Content>
         <Section>
           <Container>
+            <h1
+              className={styles.title}
+              dangerouslySetInnerHTML={{
+                __html: title,
+              }}
+            />
+            <Metadata
+              className={styles.postMetadata}
+              date={date}
+              author={author}
+              categories={categories}
+              options={metadataOptions}
+              isSticky={isSticky}
+            />
             <div
               className={styles.content}
               dangerouslySetInnerHTML={{

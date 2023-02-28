@@ -10,9 +10,6 @@ import Section from 'components/Section';
 
 import styles from './Nav.module.scss';
 
-import logo from '../assets/Shongshoy_Logo_animated.svg';
-import Image from 'next/image';
-
 import BootContainer from 'react-bootstrap/Container';
 import BootNav from 'react-bootstrap/Nav';
 import BootNavbar from 'react-bootstrap/Navbar';
@@ -182,7 +179,7 @@ const Nav = () => {
       <Section className={styles.navSection}>
         <p className={styles.navName}>
           <Link legacyBehavior href="/">
-            <Image src={logo} alt={title} width={220} height={140} />
+            <a>{title}</a>
           </Link>
         </p>
 

@@ -3,7 +3,10 @@
 @import "styles/components/_container";
 
 .header {
-  margin: 1.5rem 0;
+  max-width: 100%;
+    height: auto;
+    vertical-align: top;
+    border-radius: 10px;
 
   h1 {
     margin: 0;
@@ -37,8 +40,5 @@
     }
   }
 
-  figure {
-    margin-left: -2rem;
-    margin-right: -2rem;
-  }
+  
 }
