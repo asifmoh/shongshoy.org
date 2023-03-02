@@ -62,19 +62,16 @@ const Layout = ({ children }) => {
   };
 
   return (
-
     <SSRProvider>
+      <div className={styles.layoutContainer}>
+        <Helmet {...helmetSettings} />
 
-    <div className={styles.layoutContainer}>
-      <Helmet {...helmetSettings} />
+        <Nav />
 
-      <Nav />
+        <Main>{children}</Main>
 
-      <Main>{children}</Main>
-
-      <Footer />
-    </div>
-
+        <Footer />
+      </div>
     </SSRProvider>
   );
 };
