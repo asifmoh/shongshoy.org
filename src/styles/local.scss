@@ -484,3 +484,60 @@ a {
 	-moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
 	box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
 }
+
+
+.wp-block-code {
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Menlo,Consolas,monaco,monospace;
+    padding: 0.8em 1em;
+}
+
+.wp-block-code code {
+    display: block;
+    font-family: inherit;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+iframe {
+    max-width: 100%;
+	border: 0;
+    font: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+embed, object {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 600px) {	
+
+	table {width:100%;}
+  
+	thead {display: none;}
+  
+	tr:nth-of-type(2n) {background-color: inherit;}
+  
+	tr td:first-child {background: #f0f0f0; font-weight:bold;font-size:1.3em;}
+  
+	tbody td {display: block;  text-align:center;}
+  
+	tbody td:before {
+  
+		content: attr(data-th);
+  
+		display: block;
+  
+		text-align:center; 
+  
+	}
+  
+  }

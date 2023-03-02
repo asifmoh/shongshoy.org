@@ -8,6 +8,7 @@ import { helmetSettingsFromMetadata } from 'lib/site';
 import Nav from 'components/Nav';
 import Main from 'components/Main';
 import Footer from 'components/Footer';
+import SSRProvider from 'react-bootstrap/SSRProvider';
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -61,6 +62,9 @@ const Layout = ({ children }) => {
   };
 
   return (
+
+    <SSRProvider>
+
     <div className={styles.layoutContainer}>
       <Helmet {...helmetSettings} />
 
@@ -70,6 +74,8 @@ const Layout = ({ children }) => {
 
       <Footer />
     </div>
+
+    </SSRProvider>
   );
 };
 
