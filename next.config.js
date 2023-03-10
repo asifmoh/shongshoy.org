@@ -5,6 +5,9 @@ const sitemap = require('./plugins/sitemap');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  
+  runtime: 'experimental-edge',
+  appDir: true,
   reactStrictMode: true,
   swcMinify: true,
   
@@ -40,7 +43,7 @@ module.exports = () => {
   return plugins.reduce((acc, plugin) => plugin(acc), nextConfig);
 };
 
-
+module.exports = nextConfig;
 /**
  * parseEnv
  * @description Helper function to check if a variable is defined and parse booelans
