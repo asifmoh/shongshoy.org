@@ -41,7 +41,8 @@
     "rss": "^1.2.2",
     "sass": "^1.58.3",
     "sass-loader": "^13.2.0",
-    "style.css": "^1.0.3"
+    "style.css": "^1.0.3",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "eslint": "8.35.0",
