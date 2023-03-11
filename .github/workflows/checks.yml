@@ -49,5 +49,7 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPOSITORY_NAME: asifmoh/shongshoy.org
           brach: gh-pages
           folder: out # The folder the action should deploy.  
